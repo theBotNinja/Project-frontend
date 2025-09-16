@@ -55,7 +55,7 @@ const Footer = () => {
                   </div>
                   <div className="col-12 footer_credits text-center">
                     <span>
-                      © 2023 <a>Women Safety</a>™. All Rights Reserved.
+                      © 2025 <a>Women Safety</a>™. All Rights Reserved.
                     </span>
                   </div>
                 </div>
@@ -111,7 +111,7 @@ const Footer = () => {
                   </div>
                   <div className="col-12 footer_credits text-center">
                     <span>
-                      © 2023 <a>Women Safety</a>™. All Rights Reserved.
+                      © 2025 <a>Women Safety</a>™. All Rights Reserved.
                     </span>
                   </div>
                 </div>
