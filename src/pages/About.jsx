@@ -35,7 +35,7 @@ const About = () => {
               </p>
             </div>
             <div className="col-sm-12 col-lg-7 text-center text-md-start">
-              <img decoding="async" src={about} className="img-fluid" alt="" />
+              <img decoding="async" src={about} style={{width:"50%"}} className="img-fluid" alt="" />
             </div>
           </div>
         </div>
@@ -45,7 +45,7 @@ const About = () => {
               <div className="col-sm-12 col-lg-6 px-5 text-center text-md-start">
                 <img
                   decoding="async"
-                  src={about2}
+                  src={about2} style={{width:"50%"}}
                   className="img-fluid"
                   alt=""
                 />
@@ -76,7 +76,7 @@ const About = () => {
               </p>
             </div>
             <div className="col-sm-12 col-lg-7 text-center text-md-start">
-              <img decoding="async" src={about3} className="img-fluid" alt="" />
+              <img decoding="async" src={about3} style={{width:"50%"}} className="img-fluid" alt="" />
             </div>
           </div>
           </div>
