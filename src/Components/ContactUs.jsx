@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import '../styles/parallelx.css'
 import Navbar from './Navbar/Navbar'
 import Footer from './Footer/Footer'
-import email from '../images/emailImg.png'
+import email from '../gifs/helpdesk.gif'
 import toast from 'react-hot-toast'
 
 const ContactUs = () => {

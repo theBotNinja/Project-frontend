@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import "../styles/about.css";
-import about from "../images/aboutUs.png";
-import about2 from "../images/aboutUs2.png";
+import about from "../images/3d-report.png";
+import about2 from "../images/3d-speaker.png";
+import about3 from "../images/link.png";
 import "../styles/features.css";
 
 const About = () => {
@@ -42,14 +43,18 @@ const About = () => {
           <div className="container">
             <div className="row align-items-center">
               <div className="col-sm-12 col-lg-6 px-5 text-center text-md-start">
-                <img decoding="async" src={about2} className="img-fluid" alt=""/>
+                <img
+                  decoding="async"
+                  src={about2}
+                  className="img-fluid"
+                  alt=""
+                />
               </div>
               <div className="col-sm-12 col-lg-6 text-center text-lg-start">
                 <p className="about_number">2</p>
-                <h2 className="about_title">The best reliable source</h2>
+                <h2 className="about_title">Developer Note</h2>
                 <p className="about_text" style={{ textAlign: "justify" }}>
-                  We're more than just a webapp; we're your trusted partner in
-                  reaching home safe..
+                  App is under development and will be ready to use soon ...
                 </p>
                 <div className="mt-5">
                   <a className="learn-more-btn btn-header" href="#brands">
@@ -58,6 +63,22 @@ const About = () => {
                 </div>
               </div>
             </div>
+          <div className="row align-items-center">
+            <div className="col-sm-12 col-lg-5 text-center text-lg-start">
+              <p className="about_number">3</p>
+              <h2 className="about_title">
+                Shield Her is Project made by
+              </h2>
+              <p className="about_text " style={{ textAlign: "justify" }}>
+                Devansh Kumar Joshi ,
+                Sandeep Kumar and
+                Harsh singh 
+              </p>
+            </div>
+            <div className="col-sm-12 col-lg-7 text-center text-md-start">
+              <img decoding="async" src={about3} className="img-fluid" alt="" />
+            </div>
+          </div>
           </div>
         </div>
       </section>
