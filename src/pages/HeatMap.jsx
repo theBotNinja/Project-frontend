@@ -56,8 +56,8 @@ export default function Heatmap() {
       );
       if (res.status === 200) {
         // success
-      } else {
-        // fail to send or get data
+        console.log(res.body)
+        setHeatPoints(res.body.points)
       }
     } catch (e) {
       console.log(e);
