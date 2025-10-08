@@ -22,7 +22,6 @@
   font-weight: 700;
   line-height: 1.5;
   margin-bottom: 15px;
-  color: blueviolet;
 }
 .banner_wrapper .banner-title {
   font-weight: 800;
@@ -45,6 +44,7 @@
 }
 .banner_wrapper .learn-more-btn-section {
   display: flex;
+  gap:7px;
   justify-content: left;
   align-items: center;
   margin-top: 20px;

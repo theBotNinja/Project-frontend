@@ -18,8 +18,6 @@ const Emergency = () => {
 
   const handleSubmit = async (e) => {
     try {
-      console.log(lat);
-      console.log(long);
       const payload = {
         userId: auth?.user._id,
         lat,
@@ -54,6 +52,7 @@ const Emergency = () => {
       navigator.geolocation.getCurrentPosition(showPosition);
     } else {
       console.log("Error");
+      toast.error("Can't get location of the device!")
     }
   };
 

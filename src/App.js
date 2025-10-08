@@ -15,12 +15,14 @@ import AboutUs2 from './pages/AboutUs2';
 import ContactUs from './Components/ContactUs';
 import ChatScreen from './pages/ChatScreen'
 import HeroCaro from './pages/HeroCaro';
+import HeatMap from './pages/HeatMap';
 
 function App() {
   return (
     <Router>
       <Routes> 
       <Route path='/' element={<Home />} />
+      <Route path='/map' element={<HeatMap />} />
       <Route path='/caro' element={<HeroCaro />} />
       <Route path='/about' element={<AboutUs2 />} />
       <Route path='/*' element={<NotFound/>} />
