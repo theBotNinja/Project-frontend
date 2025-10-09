@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../Components/Navbar/Navbar";
 import Footer from "../Components/Footer/Footer";
 import { MapContainer, TileLayer, useMap } from "react-leaflet";
@@ -23,9 +23,7 @@ export default function Heatmap() {
   const [long, setLong] = useState("");
   const [lat, setLat] = useState("");
   const [auth, setAuth] = useAuth();
-  const [heatPoints, setHeatPoints] = useState([
-    [0, 0, 0.8]
-  ]);
+  const [heatPoints, setHeatPoints] = useState([[0, 0, 0.8]]);
   useEffect(() => getLocation(), []);
   const showPosition = async (position) => {
     let latitude = position.coords.latitude;
@@ -43,7 +41,6 @@ export default function Heatmap() {
   };
   // sumbit locations to server and wait for data
   const handleSubmit = async (e) => {
-    toast.loading("updating info ...")
     try {
       const payload = {
         userId: auth?.user._id,
@@ -54,11 +51,14 @@ export default function Heatmap() {
         "https://project-wsb.vercel.app/api/v1/map",
         payload
       );
-      toast.loading("wating for response ...")
+      toast.promise(res, {
+        loading: "updating info ...",
+        success: "updated info successfully",
+        error: "Error when updating",
+      });
       if (res.status === 200) {
         // success
-        setHeatPoints(res.data.points)
-        toast.success("updated info successfully")
+        setHeatPoints(res.data.points);
       }
     } catch (e) {
       console.log(e);
@@ -84,7 +84,7 @@ export default function Heatmap() {
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
           <HeatmapLayer points={heatPoints} />
         </MapContainer>
-      <button onClick={handleSubmit}> update info</button>
+        <button onClick={handleSubmit}> update info</button>
       </div>
       <Footer></Footer>
     </>
