@@ -12,7 +12,7 @@ import "leaflet.heat";
 const HeatmapLayer = ({ points }) => {
   const map = useMap();
   L.heatLayer(points, {
-    radius: 25,
+    radius: 50,
     blur: 15,
     maxZoom: 17,
   }).addTo(map);
