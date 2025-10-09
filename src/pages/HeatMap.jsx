@@ -43,8 +43,8 @@ export default function Heatmap() {
   };
   // sumbit locations to server and wait for data
   const handleSubmit = async (e) => {
-    let toastID = toast.loading("updating info ...")
     try {
+      let toastID = toast.loading("updating info ...")
       const payload = {
         userId: auth?.user._id,
         lat,
