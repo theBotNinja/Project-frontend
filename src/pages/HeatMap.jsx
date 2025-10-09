@@ -43,27 +43,28 @@ export default function Heatmap() {
   };
   // sumbit locations to server and wait for data
   const handleSubmit = async (e) => {
+    toast.loading("updating info ...")
     try {
       const payload = {
         userId: auth?.user._id,
         lat,
         long,
       };
-      console.log(payload);
       const res = await axios.post(
         "https://project-wsb.vercel.app/api/v1/map",
         payload
       );
+      toast.loading("wating for response ...")
       if (res.status === 200) {
         // success
         setHeatPoints(res.data.points)
+        toast.success("updated info successfully")
       }
     } catch (e) {
       console.log(e);
       toast.error("Something went wrong");
     }
   };
-
   return (
     <>
       <Navbar />
