@@ -77,7 +77,7 @@ export default function Heatmap() {
         }}
       >
         <MapContainer
-          center={[26.728464, 83.437183]}
+          center={[{lat}, {long}]}
           zoom={14}
           style={{ height: "100vh", width: "100%" }}
         >
