@@ -142,3 +142,11 @@ h3 {
   position: relative;
   z-index: 2;
 }
+
+.clickbtn:hover{
+  opacity: 0.8;
+  scale: 1.05;
+}
+.clickbtn:active{
+  scale: 0.95;
+}

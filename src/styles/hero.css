@@ -6,12 +6,10 @@
     to bottom,
     #ffffff,
     #ffffff,
-    #f9f5ff,
-    #f9f5ff,
-    #d5c2ff,
-    #ba9aff,
-    #9e63ff,
-    #8400ff
+    #ffffff,
+    #f4e5ff,
+    #ebcfff,
+    #00eaff
   );
   background-size: cover;
   justify-content: center;
@@ -91,7 +89,7 @@
 }
 
 .shape-fill {
-  fill: #8400ff;
+  fill: #00eeff;
   padding: 0 !important;
   margin-top: -1px !important;
 }

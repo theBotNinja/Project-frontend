@@ -25,7 +25,7 @@ const Features = () => {
                 <img
                   src={rock}
                   width={150}
-                  style={{ borderRadius: "7%" }}
+                  style={{ borderRadius: "100%" }}
                   alt=""
                 />
                 <h3 className="mt-4">Emergency Mail Alert</h3>
@@ -42,7 +42,7 @@ const Features = () => {
                 <img
                   src={puzzle}
                   width={150}
-                  style={{ borderRadius: "7%" }}
+                  style={{ borderRadius: "100%" }}
                   alt=""
                 />
                 <h3 className="mt-4">Emergency Service support</h3>
@@ -59,7 +59,7 @@ const Features = () => {
                 <img
                   src={statis}
                   width={150}
-                  style={{ borderRadius: "7%" }}
+                  style={{ borderRadius: "100%" }}
                   alt=""
                 />
                 <h3 className="mt-4">Reporting & Crime Data</h3>
@@ -76,7 +76,7 @@ const Features = () => {
                 <img
                   src={noti}
                   width={150}
-                  style={{ borderRadius: "7%" }}
+                  style={{ borderRadius: "100%" }}
                   alt=""
                 />
                 <h3 className="mt-4">Live location </h3>
@@ -94,7 +94,7 @@ const Features = () => {
                 <img
                   src={search}
                   width={150}
-                  style={{ borderRadius: "7%" }}
+                  style={{ borderRadius: "100%" }}
                   alt=""
                 />
                 <h3 className="mt-4">Safe Area Recommendation</h3>
@@ -112,7 +112,7 @@ const Features = () => {
                 <img
                   src={proct}
                   width={150}
-                  style={{ borderRadius: "7%" }}
+                  style={{ borderRadius: "100%" }}
                   alt=""
                 />
                 <h3 className="mt-4">AI-Powered Systems</h3>
