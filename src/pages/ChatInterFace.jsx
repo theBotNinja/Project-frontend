@@ -1,4 +1,4 @@
-import React, { cache, useState } from "react";
+import React, { useState } from "react";
 import "../styles/ChatInterFace.css";
 import Navbar from "../Components/Navbar/Navbar";
 import Footer from "../Components/Footer/Footer";
