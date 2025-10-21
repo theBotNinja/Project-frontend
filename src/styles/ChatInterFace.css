@@ -1,0 +1,75 @@
+/* Light Theme GPT-Like UI */
+.gpt-container {
+  background-color: #f9f9fb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5%;
+  margin-bottom: 1%;
+}
+.contain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gpt-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 1.8rem;
+}
+
+.gpt-output-area {
+  background-color: #f4f6f8;
+  border-radius: 12px;
+  min-height: 150px;
+  width: 80%;
+  padding: 16px;
+  overflow-y: auto;
+  border: 1px solid #e0e0e0;
+}
+
+.gpt-output {
+  white-space: pre-wrap;
+  color: #444;
+  font-size: 1rem;
+}
+
+.gpt-form {
+  display: flex;
+  gap: 10px;
+  width: 80%;
+  margin-top: 12px;
+}
+
+.gpt-input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.gpt-input:focus {
+  border-color: #8c00ff;
+}
+
+.gpt-btn {
+  background-color: #7b00ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.gpt-btn:hover {
+  background-color: #7000cc;
+}

@@ -16,6 +16,7 @@ import ContactUs from './Components/ContactUs';
 import ChatScreen from './pages/ChatScreen'
 import HeroCaro from './pages/HeroCaro';
 import HeatMap from './pages/HeatMap';
+import ChatInterFace from './pages/ChatInterFace';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
       <Route path='/incident' element={<Incident/>} />
       <Route path='/closedreport' element={<CloseFile/>} />
       <Route path='/chat' element={<ChatScreen/>} />
+      <Route path='/chatbot' element={<ChatInterFace/>} />
       </Routes>
       <Toaster />
     </Router>
