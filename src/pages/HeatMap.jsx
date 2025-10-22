@@ -25,7 +25,7 @@ export default function Heatmap() {
     L.marker([lat, long]).addTo(map);
     return null;
   };
-  const [auth, setAuth] = useAuth(false);
+  const [auth, setAuth] = useAuth();
   const [heatPoints, setHeatPoints] = useState([[0, 0, 0.8]]);
   const showPosition = async (position) => {
     let latitude = position.coords.latitude;

@@ -1,14 +1,14 @@
 /* Light Theme GPT-Like UI */
 .gpt-container {
-  background-color: #f9f9fb;
+  background-color: #e8e8e8;
   min-height: 100vh;
   display: flex;
   width: 100vw;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
-  margin-top: 5%;
-  margin-bottom: 1%;
+  justify-content: space-around;
+  padding-top: 7%;
+  padding-bottom: 1%;
 }
 .contain{
     display: flex;
@@ -25,13 +25,11 @@
 }
 
 .gpt-output-area {
-  background-color: #f4f6f8;
   border-radius: 12px;
   min-height: 150px;
   width: 80%;
   padding: 16px;
   overflow-y: auto;
-  border: 1px solid #e0e0e0;
 }
 
 .gpt-output {
@@ -45,6 +43,9 @@
   gap: 10px;
   width: 80%;
   margin-top: 12px;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 10px;
 }
 
 .gpt-input {
@@ -65,7 +66,7 @@
   background-color: #7b00ff;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 20px;
   padding: 12px 20px;
   cursor: pointer;
   transition: background-color 0.2s;
@@ -73,4 +74,32 @@
 
 .gpt-btn:hover {
   background-color: #7000cc;
+}
+.container-div{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.prompt-style{
+  border: 1px solid #333;
+  border-radius: 15px;
+  padding: 7px;
+  white-space: pre-wrap; 
+  word-wrap: break-word;   
+  overflow-wrap: break-word;
+  width:fit-content;
+  background-color: #faecff;
+  align-self: self-end;
+  font-weight: 500;
+  font-size:medium;
+}
+.output-style{
+  padding: 7px;
+  white-space: pre-wrap; 
+  word-wrap: break-word;   
+  overflow-wrap: break-word;
+  font-weight: 600;
+  font-size:medium;
 }

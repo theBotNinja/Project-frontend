@@ -8,33 +8,41 @@ import toast from "react-hot-toast";
 
 const ChatInterFace = () => {
   const [prompt, setPrompt] = useState("");
-  const [output, setOutput] = useState("");
-  const [auth, setAuth] = useAuth(false);
+  const [output, setOutput] = useState(false);
+  const [tempChatHistory, setChatHistory] = useState([]);
+  const [auth, setAuth] = useAuth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (prompt.trim() === "") return;
     // Simulate GPT-like text generation
-    setOutput("Thinking...");
-    const payload = {
-      userId: auth?.user._id,
-      prompt,
-    };
-    //api call
+    setOutput(true);
     try {
-      const chatBotRes = await axios.post(
+      const payload = {
+        userId: auth?.user._id,
+        prompt,
+      };
+      //api call
+      axios.post(
         "https://project-wsb.vercel.app/api/v1/chatbot",
         payload
-      );
-      if (chatBotRes.status === 200) {
-        setOutput(chatBotRes.output);
-      } else {
-        setOutput("Error");
-        toast.error("Can't generate response");
-      }
-    } catch (e) {
-      console.log(e);
-      toast.error("Something went wrong API call");
+      ).then((result) => {
+          if (result.status === 200) {
+            setChatHistory([...tempChatHistory, { prompt, output:result.data.output }]);
+          } else {
+            toast.error("Can't generate response");
+          }
+        })
+        .catch((error) => {
+          toast.error(error);
+        })
+        .finally(() => {
+          setOutput(false);
+        });
+      } catch (e) {
+        console.log(e);
+        toast.error("Something went wrong API call");
+        setOutput(false);
     }
     setPrompt("");
   };
@@ -48,12 +56,21 @@ const ChatInterFace = () => {
           <h6>Ask me anything?</h6>
         </span>
 
-        <div className="gpt-output-area">
-          <pre className="gpt-output">
-            {output || "Waiting for your prompt..."}
-          </pre>
-        </div>
-
+        {tempChatHistory.length ? (
+          <div className="gpt-output-area">
+            {tempChatHistory.map((item, index) => (
+              <div key={index} className="container-div">
+                <pre className="prompt-style">{item.prompt}</pre>
+                <pre className="output-style">{item.output}</pre>
+              </div>
+            ))}
+            
+            {output?<span className="output-style">Thinking ...</span>:""}
+            
+          </div>
+        ) : (
+          "Waiting for your prompt"
+        )}
         <form className="gpt-form" onSubmit={handleSubmit}>
           <input
             type="text"
@@ -62,7 +79,7 @@ const ChatInterFace = () => {
             value={prompt}
             onChange={(e) => setPrompt(e.target.value)}
           />
-          <button type="submit" className="gpt-btn">
+          <button type="submit" disabled={output} className="gpt-btn">
             Send
           </button>
         </form>
