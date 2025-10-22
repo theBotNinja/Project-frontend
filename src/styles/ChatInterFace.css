@@ -1,7 +1,6 @@
 /* Light Theme GPT-Like UI */
 .gpt-container {
   background-color: #e8e8e8;
-  min-height: 100vh;
   display: flex;
   width: 100vw;
   flex-direction: column;
