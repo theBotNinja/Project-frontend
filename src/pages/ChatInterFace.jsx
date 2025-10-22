@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../styles/ChatInterFace.css";
 import Navbar from "../Components/Navbar/Navbar";
 import Footer from "../Components/Footer/Footer";
 import axios from "axios";
@@ -49,11 +48,10 @@ const ChatInterFace = () => {
 
   return (
     <>
-      <Navbar></Navbar>
       <div className="gpt-container">
         <span className="contain">
           <h1 className="gpt-title">ShieldHer Chatbot </h1>
-          <h6>Ask me anything?</h6>
+          <span>Ask me anything?</span>
         </span>
 
         {tempChatHistory.length ? (
@@ -84,7 +82,6 @@ const ChatInterFace = () => {
           </button>
         </form>
       </div>
-      <Footer></Footer>
     </>
   );
 };
