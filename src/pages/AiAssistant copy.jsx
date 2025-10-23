@@ -51,18 +51,18 @@ const AiAssistant2 = () => {
   return (
     <>
       <Navbar></Navbar>
-      <div className="main-c" >
+      <div className="main-box" >
         <span >
           <h1 >ShieldHer Chatbot </h1>
           <span>Ask me anything?</span>
         </span>
 
         {tempChatHistory.length ? (
-          <div>
+          <div className="output-box">
             {tempChatHistory.map((item, index) => (
-              <div key={index} >
-                <pre >{item.prompt}</pre>
-                <pre >{item.output}</pre>
+              <div className="cont" key={index} >
+                <pre className="prompt-style" >{item.prompt}</pre>
+                <pre className="output-style">{item.output}</pre>
               </div>
             ))}
 
@@ -71,15 +71,15 @@ const AiAssistant2 = () => {
         ) : (
           "Waiting for your prompt"
         )}
-        <form  onSubmit={handleSubmit}>
+        <form className="input-form"  onSubmit={handleSubmit}>
           <input
             type="text"
-            
+            className="input-input"
             placeholder="Type your prompt here..."
             value={prompt}
             onChange={(e) => setPrompt(e.target.value)}
           />
-          <button type="submit" disabled={output}>
+          <button className="input-btn" type="submit" disabled={output}>
             Send
           </button>
         </form>

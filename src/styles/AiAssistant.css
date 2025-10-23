@@ -1,8 +1,82 @@
-.main-c{
-  width: 100%;
-  min-height: 100vh;
+/* Light Theme GPT-Like UI */
+.main-box {
+  background-color: #e8e8e8;
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 7%;
+  padding-bottom: 1%;
+}
+
+.output-box {
+  border-radius: 12px;
+  min-height: 150px;
+  width: 80%;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.input-form {
+  display: flex;
+  gap: 10px;
+  width: 80%;
+  margin-top: 12px;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 10px;
+}
+
+.input-input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-input:focus {
+  border-color: #8c00ff;
+}
+
+.input-btn {
+  background-color: #7b00ff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.input-btn:hover {
+  background-color: #7000cc;
+}
+.cont{
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+}
+.prompt-style{
+  border: 1px solid #333;
+  border-radius: 15px;
+  padding: 7px;
+  white-space: pre-wrap; 
+  word-wrap: break-word;   
+  overflow-wrap: break-word;
+  width:fit-content;
+  background-color: #faecff;
+  align-self: self-end;
+  font-weight: 500;
+  font-size:medium;
+}
+.output-style{
+  padding: 7px;
+  white-space: pre-wrap; 
+  word-wrap: break-word;   
+  overflow-wrap: break-word;
+  font-weight: 600;
+  font-size:medium;
 }
