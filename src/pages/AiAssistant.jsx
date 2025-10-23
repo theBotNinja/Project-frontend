@@ -4,9 +4,9 @@ import Footer from "../Components/Footer/Footer";
 import axios from "axios";
 import { useAuth } from "../context/auth";
 import toast from "react-hot-toast";
-import "../styles/ChatInterFace.css"
+import "../styles/AiAssistant.css";
 
-const ChatInterFace = () => {
+const AiAssistant = () => {
   const [prompt, setPrompt] = useState("");
   const [output, setOutput] = useState(false);
   const [tempChatHistory, setChatHistory] = useState([]);
@@ -23,12 +23,14 @@ const ChatInterFace = () => {
         prompt,
       };
       //api call
-      axios.post(
-        "https://project-wsb.vercel.app/api/v1/chatbot",
-        payload
-      ).then((result) => {
+      axios
+        .post("https://project-wsb.vercel.app/api/v1/chatbot", payload)
+        .then((result) => {
           if (result.status === 200) {
-            setChatHistory([...tempChatHistory, { prompt, output:result.data.output }]);
+            setChatHistory([
+              ...tempChatHistory,
+              { prompt, output: result.data.output },
+            ]);
           } else {
             toast.error("Can't generate response");
           }
@@ -39,16 +41,17 @@ const ChatInterFace = () => {
         .finally(() => {
           setOutput(false);
         });
-      } catch (e) {
-        console.log(e);
-        toast.error("Something went wrong API call");
-        setOutput(false);
+    } catch (e) {
+      console.log(e);
+      toast.error("Something went wrong API call");
+      setOutput(false);
     }
     setPrompt("");
   };
 
   return (
     <>
+      <Navbar></Navbar>
       <div className="gpt-container">
         <span className="contain">
           <h1 className="gpt-title">ShieldHer Chatbot </h1>
@@ -63,9 +66,8 @@ const ChatInterFace = () => {
                 <pre className="output-style">{item.output}</pre>
               </div>
             ))}
-            
-            {output?<span className="output-style">Thinking ...</span>:""}
-            
+
+            {output ? <span className="output-style">Thinking ...</span> : ""}
           </div>
         ) : (
           "Waiting for your prompt"
@@ -83,8 +85,9 @@ const ChatInterFace = () => {
           </button>
         </form>
       </div>
+      <Footer></Footer>
     </>
   );
 };
 
-export default ChatInterFace;
+export default AiAssistant;

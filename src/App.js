@@ -16,7 +16,8 @@ import ContactUs from './Components/ContactUs';
 import ChatScreen from './pages/ChatScreen'
 import HeroCaro from './pages/HeroCaro';
 import HeatMap from './pages/HeatMap';
-import ChatInterFace from './pages/ChatInterFace';
+import AiAssistant from './pages/AiAssistant';
+import AiAssistant2 from './pages/AiAssistant copy';
 
 function App() {
   return (
@@ -37,7 +38,8 @@ function App() {
       <Route path='/incident' element={<Incident/>} />
       <Route path='/closedreport' element={<CloseFile/>} />
       <Route path='/chat' element={<ChatScreen/>} />
-      <Route path='/chatbot' element={<ChatInterFace/>} />
+      <Route path='/AiAssistant' element={<AiAssistant/>} />
+      <Route path='/chatbot' element={<AiAssistant2/>} />
       </Routes>
       <Toaster />
     </Router>
