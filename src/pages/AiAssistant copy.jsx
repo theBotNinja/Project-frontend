@@ -4,7 +4,7 @@ import Footer from "../Components/Footer/Footer";
 import axios from "axios";
 import { useAuth } from "../context/auth";
 import toast from "react-hot-toast";
-
+import "../styles/AiAssistant.css"
 const AiAssistant2 = () => {
   const [prompt, setPrompt] = useState("");
   const [output, setOutput] = useState(false);
@@ -51,7 +51,7 @@ const AiAssistant2 = () => {
   return (
     <>
       <Navbar></Navbar>
-      <div >
+      <div className="main-c" >
         <span >
           <h1 >ShieldHer Chatbot </h1>
           <span>Ask me anything?</span>
