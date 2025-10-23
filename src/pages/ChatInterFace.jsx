@@ -4,6 +4,7 @@ import Footer from "../Components/Footer/Footer";
 import axios from "axios";
 import { useAuth } from "../context/auth";
 import toast from "react-hot-toast";
+import "../styles/ChatInterFace.css"
 
 const ChatInterFace = () => {
   const [prompt, setPrompt] = useState("");
