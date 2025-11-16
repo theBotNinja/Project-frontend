@@ -18,6 +18,7 @@ const Hero = () => {
                             <div className="learn-more-btn-section" >
                                 <Link to='/emergency' style={{backgroundColor:"red"}} className=" nav-link learn-more-btn btn-header clickbtn" href="#car">Emergency</Link>
                                 <Link to='/map' style={{backgroundColor:"red"}} className=" nav-link learn-more-btn btn-header clickbtn" href="#car">Heat Map</Link>
+                                <Link to='/chatbot' style={{backgroundColor:"red"}} className=" nav-link learn-more-btn btn-header clickbtn" href="#car">ChatBot</Link>
                             </div>
                         </div>
                     </div>
